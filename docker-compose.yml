@@ -10,7 +10,7 @@ services:
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: psycronos
-      WORDPRESS_DB_PASSWORD: 1234
+      WORDPRESS_DB_PASSWORD: 030118050
       WORDPRESS_DB_NAME: psycronosdb
     volumes:
       - wordpress:/var/www/html
@@ -21,7 +21,7 @@ services:
     environment:
       MYSQL_DATABASE: psycronosdbsql
       MYSQL_USER: psycronos
-      MYSQL_PASSWORD: 1234
+      MYSQL_PASSWORD: 030118050
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
