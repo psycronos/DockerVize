@@ -14,7 +14,17 @@ services:
       WORDPRESS_DB_NAME: psycronosdb
     volumes:
       - wordpress:/var/www/html
-
+web:
+image: nginx:latest
+ports:
+- "80:80"
+volumes:
+- ./src:/usr/share/nginx/html
+links:
+- php
+php:
+image: php:7-fpm
+  
   db:
     image: mysql:5.7
     restart: always
